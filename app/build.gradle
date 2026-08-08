@@ -24,7 +24,6 @@ plugins {
 tasks.register("downloadImageFS") {
         def assetDir = new File(project.rootDir, ["app","src","main","assets"].join(File.separator))
     File imageFS = new File(assetDir, "imagefs.txz")
-    String imageFSSHA256Sum = "https://gitlab.com/winlator3/winlator-extra/-/raw/main/imagefs/imagefs.txz.sha256sum"
     int parts = 4
 
     doLast {
