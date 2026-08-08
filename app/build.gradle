@@ -33,7 +33,7 @@ tasks.register("downloadImageFS") {
             FileOutputStream outputStream = new FileOutputStream(imageFS)
             for (int i = 0; i < parts; i++) {
                 File partFile = new File(assetDir, String.format("imagefs.txz.%02d", i))
-                String partURL = String.format("https://gitlab.com/winlator3/winlator-extra/-/raw/main/imagefs/imagefs.txz.%02d", i)
+                String partURL = String.format("https://github.com/RandomCoderOrg/udroid-download/releases/download/V3R86/jammy-xfce4Raw-arm64.tar.gz", i)
                 new URL(partURL).withInputStream { p ->
                     partFile.withOutputStream { it << p }
                     outputStream << partFile.bytes
